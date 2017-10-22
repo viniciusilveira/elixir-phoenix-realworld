@@ -36,10 +36,8 @@ defmodule RealWorldWeb.Endpoint do
     key: "_real_world_key",
     signing_salt: "Stn1Lrm3"
 
-  if Mix.env == :dev do
-    plug Corsica, origins: "*",
+  plug Corsica, origins: "*",
     allow_headers: ["accept", "authorization", "content-type", "origin", "x-requested-with"]
-  end
   
   plug RealWorldWeb.Router
 
